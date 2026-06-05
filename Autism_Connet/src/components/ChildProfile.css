@@ -1,0 +1,484 @@
+.profile-main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 36px 32px;
+}
+
+/* ================= HEADER ================= */
+
+.profile-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* ================= FORM CARD ================= */
+
+.profile-form-card {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,0.95),
+      rgba(255,245,255,0.96)
+    );
+
+  border: 3px solid #f0d8ff;
+
+  border-radius: 32px;
+
+  padding: 34px;
+
+  margin-bottom: 32px;
+
+  box-shadow:
+    0 10px 30px rgba(173,120,255,0.12),
+    0 4px 12px rgba(255,182,193,0.12);
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.profile-form-card::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(circle at top left,
+      rgba(255,192,203,0.16),
+      transparent 30%),
+
+    radial-gradient(circle at bottom right,
+      rgba(173,216,255,0.18),
+      transparent 30%);
+
+  pointer-events: none;
+}
+
+.form-title {
+  font-size: 1.6rem;
+  font-weight: 900;
+
+  margin-bottom: 24px;
+
+  color: #5d3fd3;
+
+  text-align: center;
+
+  letter-spacing: 0.5px;
+}
+
+/* ================= FORM ================= */
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+/* ================= INPUTS ================= */
+
+.profile-form input,
+.profile-form textarea,
+.profile-form select {
+  width: 100%;
+
+  border-radius: 20px;
+
+  border: 3px solid #ead8ff;
+
+  background: white;
+
+  padding: 16px 18px;
+
+  font-size: 1rem;
+
+  font-weight: 600;
+
+  transition: all 0.22s ease;
+
+  box-shadow: 0 3px 8px rgba(0,0,0,0.04);
+}
+
+.profile-form input:focus,
+.profile-form textarea:focus,
+.profile-form select:focus {
+  outline: none;
+
+  border-color: #b57cff;
+
+  transform: scale(1.01);
+
+  box-shadow:
+    0 0 0 6px rgba(181,124,255,0.16),
+    0 8px 18px rgba(181,124,255,0.18);
+}
+
+.profile-form input::placeholder,
+.profile-form textarea::placeholder {
+  color: #b4a8c7;
+}
+
+/* ================= AVATAR PICKER ================= */
+
+.avatar-picker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 8px;
+}
+
+.avatar-opt {
+  width: 64px;
+  height: 64px;
+
+  font-size: 2rem;
+
+  border-radius: 22px;
+
+  border: 3px solid #efdfff;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #fff7ff
+    );
+
+  cursor: pointer;
+
+  transition: all 0.18s ease;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow:
+    0 6px 14px rgba(173,120,255,0.10);
+}
+
+.avatar-opt:hover {
+  transform: translateY(-4px) scale(1.08) rotate(-3deg);
+
+  border-color: #c689ff;
+
+  box-shadow:
+    0 10px 20px rgba(173,120,255,0.22);
+}
+
+.avatar-opt.selected {
+  border-color: #8f4fff;
+
+  background:
+    linear-gradient(
+      145deg,
+      #f3ddff,
+      #ffe6f7
+    );
+
+  transform: scale(1.12);
+
+  box-shadow:
+    0 0 0 6px rgba(173,120,255,0.18),
+    0 12px 22px rgba(173,120,255,0.25);
+}
+
+/* ================= COLOR PICKER ================= */
+
+.color-picker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.color-opt {
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+
+  border: 4px solid white;
+
+  cursor: pointer;
+
+  transition: all 0.18s ease;
+
+  box-shadow:
+    0 4px 10px rgba(0,0,0,0.10);
+}
+
+.color-opt:hover {
+  transform: scale(1.2);
+}
+
+.color-opt.selected {
+  transform: scale(1.25);
+
+  border-color: #333;
+
+  box-shadow:
+    0 0 0 5px rgba(0,0,0,0.08),
+    0 8px 18px rgba(0,0,0,0.18);
+}
+
+/* ================= BUTTONS ================= */
+
+.form-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.form-actions button {
+  flex: 1;
+
+  border: none;
+
+  border-radius: 20px;
+
+  padding: 16px 18px;
+
+  font-size: 1rem;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.form-actions button:hover {
+  transform: translateY(-2px) scale(1.02);
+}
+
+/* ================= PROFILE GRID ================= */
+
+.profiles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 24px;
+}
+
+/* ================= PROFILE CARD ================= */
+
+.profile-card {
+  background:
+    linear-gradient(
+      160deg,
+      rgba(255,255,255,0.95),
+      rgba(248,244,255,0.96)
+    );
+
+  border-radius: 30px;
+
+  padding: 26px;
+
+  box-shadow:
+    0 10px 24px rgba(173,120,255,0.12);
+
+  border: 3px solid #f0dfff;
+
+  transition: all 0.22s ease;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.profile-card::before {
+  content: "";
+
+  position: absolute;
+  top: -50px;
+  right: -50px;
+
+  width: 120px;
+  height: 120px;
+
+  border-radius: 50%;
+
+  background: rgba(255,192,203,0.12);
+}
+
+.profile-card:hover {
+  transform: translateY(-8px) rotate(-1deg);
+
+  box-shadow:
+    0 16px 34px rgba(173,120,255,0.18);
+}
+
+/* ================= AVATAR ================= */
+
+.profile-card-avatar {
+  width: 90px;
+  height: 90px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 2.8rem;
+
+  margin: 0 auto 18px;
+
+  box-shadow:
+    0 8px 20px rgba(0,0,0,0.12);
+
+  border: 5px solid white;
+}
+
+/* ================= INFO ================= */
+
+.profile-card-info {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.profile-card-info h3 {
+  font-size: 1.35rem;
+  font-weight: 900;
+
+  color: #4d3d72;
+
+  margin-bottom: 6px;
+}
+
+.profile-card-info p {
+  font-size: 0.92rem;
+  color: #7b6d93;
+}
+
+.pref-note {
+  margin-top: 8px;
+
+  font-size: 0.82rem !important;
+
+  color: #9a89b5 !important;
+
+  font-style: italic;
+}
+
+/* ================= ACTIONS ================= */
+
+.profile-card-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-danger {
+  background:
+    linear-gradient(
+      145deg,
+      #ffe1e1,
+      #ffd1d1
+    );
+
+  color: #d64545;
+
+  border: none;
+
+  border-radius: 18px;
+
+  padding: 12px 14px;
+
+  font-size: 0.9rem;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+
+  flex: 1;
+
+  box-shadow:
+    0 6px 12px rgba(255,0,0,0.08);
+}
+
+.btn-danger:hover {
+  transform: scale(1.05);
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffd2d2,
+      #ffc0c0
+    );
+}
+
+/* ================= DELETE MODAL ================= */
+
+.delete-confirm {
+  position: absolute;
+  inset: 0;
+
+  background: rgba(255,255,255,0.96);
+
+  backdrop-filter: blur(6px);
+
+  border-radius: 30px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 18px;
+
+  padding: 24px;
+
+  text-align: center;
+
+  z-index: 10;
+}
+
+.delete-confirm p {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #4f4f4f;
+}
+
+.confirm-actions {
+  display: flex;
+  gap: 12px;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-main {
+    padding: 24px 16px;
+  }
+
+  .profile-form-card {
+    padding: 24px;
+  }
+
+  .avatar-opt {
+    width: 56px;
+    height: 56px;
+  }
+
+  .profile-card {
+    padding: 22px;
+  }
+}

@@ -1,0 +1,196 @@
+/* =============================================
+   AUTISM CONNECT – GLOBAL STYLES (UPGRADED)
+   Calm + Modern + Glassmorphism Ready UI System
+============================================= */
+
+:root {
+  /* ================= PRIMARY COLORS ================= */
+  --primary: #6DA8D8;
+  --primary-light: #A8D0EE;
+  --primary-dark: #4A87BB;
+
+  --secondary: #7ECBA1;
+  --secondary-light: #B5E2CB;
+  --secondary-dark: #4FA87B;
+
+  --accent: #FFB347;
+  --accent-light: #FFD08A;
+  --accent-soft: #FFF0D6;
+
+  --purple-soft: #B5A8D8;
+  --purple-light: #DDD8F0;
+
+  /* ================= BACKGROUNDS ================= */
+  --bg: #F7F9FC;
+  --bg-card: rgba(255, 255, 255, 0.6);
+  --bg-glass: rgba(255, 255, 255, 0.25);
+  --bg-sidebar: #EEF4FB;
+
+  /* ================= BORDERS ================= */
+  --border: #DDE8F2;
+  --border-light: rgba(255, 255, 255, 0.4);
+
+  /* ================= TEXT ================= */
+  --text-dark: #2D3A4A;
+  --text-mid: #5A6A7E;
+  --text-light: #8FA0B4;
+
+  /* ================= STATUS ================= */
+  --completed: #7ECBA1;
+  --pending: #FFB347;
+  --danger: #E87C7C;
+  --danger-light: #FDEAEA;
+
+  /* ================= SHADOWS ================= */
+  --shadow-sm: 0 2px 8px rgba(109, 168, 216, 0.12);
+  --shadow-md: 0 4px 20px rgba(109, 168, 216, 0.18);
+  --shadow-lg: 0 8px 32px rgba(109, 168, 216, 0.22);
+  --shadow-glass: 0 20px 60px rgba(0,0,0,0.12);
+
+  /* ================= RADIUS ================= */
+  --radius: 16px;
+  --radius-sm: 10px;
+  --radius-lg: 24px;
+  --radius-xl: 28px;
+
+  /* ================= FONTS ================= */
+  --font-body: 'Nunito', sans-serif;
+  --font-display: 'Fredoka One', cursive;
+
+  /* ================= ANIMATION SPEED ================= */
+  --fast: 0.2s;
+  --normal: 0.35s;
+  --slow: 0.6s;
+}
+
+/* =============================================
+   RESET
+============================================= */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background: linear-gradient(135deg, #F7F9FC, #EEF6FF);
+  color: var(--text-dark);
+  line-height: 1.6;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* =============================================
+   TYPOGRAPHY
+============================================= */
+h1, h2, h3 {
+  font-family: var(--font-display);
+  letter-spacing: 0.02em;
+  color: var(--text-dark);
+}
+
+h4, h5, h6 {
+  font-family: var(--font-body);
+  font-weight: 700;
+  color: var(--text-mid);
+}
+
+/* =============================================
+   BASE ELEMENTS
+============================================= */
+button {
+  cursor: pointer;
+  font-family: var(--font-body);
+  border: none;
+  outline: none;
+  transition: all var(--fast) ease;
+}
+
+input, select, textarea {
+  font-family: var(--font-body);
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =============================================
+   SCROLLBAR
+============================================= */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-light);
+  border-radius: 10px;
+}
+
+/* =============================================
+   GLASS UTILITIES (IMPORTANT FOR AUTH UI)
+============================================= */
+.glass {
+  background: var(--bg-glass);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-glass);
+}
+
+/* =============================================
+   ANIMATIONS
+============================================= */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0.85); opacity: 0; }
+  60% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.06); }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* =============================================
+   ANIMATION HELPERS
+============================================= */
+.fade-in { animation: fadeIn var(--normal) ease both; }
+.slide-in { animation: slideInLeft var(--normal) ease both; }
+.bounce-in { animation: bounceIn 0.5s ease both; }
+.pulse { animation: pulse 1.5s infinite ease-in-out; }
+
+/* =============================================
+   ACCESSIBILITY (IMPORTANT)
+============================================= */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

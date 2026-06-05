@@ -1,0 +1,19 @@
+.App {
+  text-align: center;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  background: linear-gradient(135deg, #fceabb, #f8b500);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.App-header {
+  margin-bottom: 20px;
+  color: #ff6f61;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
